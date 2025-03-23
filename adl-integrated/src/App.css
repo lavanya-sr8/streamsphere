@@ -1,0 +1,103 @@
+body {
+  background: linear-gradient(to right, #E6E6FA, #D8BFD8, #DA70D6);
+  font-family: 'Poppins', sans-serif;
+  color: #4B0082;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  color: #800080;
+}
+
+nav {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 12px;
+  width: 60%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: 0.3s ease-in-out;
+  background: #BA55D3;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a:hover {
+  background: #9932CC;
+  color: white;
+  transform: scale(1.1);
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Styles for the button container */
+.button-container {
+  background: rgba(255, 255, 255, 0.2); /* Slight white overlay */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 15px; /* Space between buttons */
+}
+
+/* Button styling */
+.button {
+  background: #800080; /* Purple color */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.button:hover {
+  color: white;
+  background: #9400D3;
+  transform: scale(1.1);
+  box-shadow: 1px solid black;
+}
