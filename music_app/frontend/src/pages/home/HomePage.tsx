@@ -5,6 +5,9 @@ import FeaturedSection from "./components/FeaturedSection";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import SectionGrid from "./components/SectionGrid";
 import { usePlayerStore } from "@/stores/usePlayerStore";
+import { motion } from "framer-motion"; // Import motion from Framer Motion
+const headphoneIcon = "/headphones.png";
+
 
 const HomePage = () => {
 	const {
@@ -33,11 +36,32 @@ const HomePage = () => {
 	}, [initializeQueue, madeForYouSongs, trendingSongs, featuredSongs]);
 
 	return (
-<main className='rounded-md overflow-hidden h-full bg-gradient-to-r from-[#D894D5] to-[#6A1B9A]'>
-<Topbar />
+		<main 
+    className="rounded-md overflow-hidden h-full"
+    style={{
+        backgroundImage: "url('bg.jpg')", // Replace with your actual image path
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+    }}
+>
+			<Topbar />
 			<ScrollArea className='h-[calc(100vh-180px)]'>
-				<div className='p-4 sm:p-6'>
-					<h1 className='text-2xl sm:text-3xl font-bold mb-6'>Good afternoon</h1>
+				<div className='p-4 sm:p-6 flex flex-col items-center'>
+					
+					{/* Animated Headphones */}
+					<motion.img 
+						src={headphoneIcon} 
+						alt="Headphones"
+						className="w-[350px] h-[350px] mb-10" // Adjust size as needed
+						animate={{ y: [0, -10, 0] }} 
+						transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+					/>
+
+					{/* Move "Good Afternoon" down */}
+					<h1 className="text-4xl sm:text-5xl font-bold mb-6 mt-6 text-left w-full pl-4">Good Afternoon</h1>
+
+					
 					<FeaturedSection />
 
 					<div className='space-y-8'>

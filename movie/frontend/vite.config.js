@@ -9,12 +9,9 @@ export default defineConfig({
 	},
 	server: {
 		proxy: {
-		  "/api": {
-			target: "https://movie-hs59.onrender.com",
-			changeOrigin: true,
-			secure: false, // 👈 ignore SSL issues
-		  },
+			"/api": {
+				target: "http://localhost:5000",
+			},
 		},
-	  },
-	  
+	},
 });

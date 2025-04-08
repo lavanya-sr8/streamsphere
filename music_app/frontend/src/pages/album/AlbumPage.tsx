@@ -42,27 +42,24 @@ const AlbumPage = () => {
 	return (
 		<div className='h-full'>
 			<ScrollArea className='h-full rounded-md'>
-				{/* Main Content */}
 				<div className='relative min-h-full'>
-					{/* Purple-themed bg gradient */}
 					<div
 						className='absolute inset-0 bg-gradient-to-b from-[#5038a0]/80 via-[#2a1a5e]/80 
-					 to-[#1a1033] pointer-events-none'
+						to-[#1a1033] pointer-events-none'
 						aria-hidden='true'
 					/>
 
-					{/* Content */}
-					<div className='relative z-10'>
-						<div className='flex p-6 gap-6 pb-8'>
+					<div className='relative z-10 p-4 sm:p-6'>
+						<div className='flex flex-col sm:flex-row gap-6 pb-8'>
 							<img
 								src={currentAlbum?.imageUrl}
 								alt={currentAlbum?.title}
-								className='w-[240px] h-[240px] shadow-xl rounded'
+								className='w-[200px] h-[200px] sm:w-[240px] sm:h-[240px] shadow-xl rounded'
 							/>
 							<div className='flex flex-col justify-end'>
 								<p className='text-sm font-medium text-purple-300'>Album</p>
-								<h1 className='text-7xl font-bold my-4 text-white'>{currentAlbum?.title}</h1>
-								<div className='flex items-center gap-2 text-sm text-purple-400'>
+								<h1 className='text-4xl sm:text-7xl font-bold my-4 text-white'>{currentAlbum?.title}</h1>
+								<div className='flex flex-wrap items-center gap-2 text-sm text-purple-400'>
 									<span className='font-medium text-white'>{currentAlbum?.artist}</span>
 									<span>• {currentAlbum?.songs.length} songs</span>
 									<span>• {currentAlbum?.releaseYear}</span>
@@ -70,7 +67,6 @@ const AlbumPage = () => {
 							</div>
 						</div>
 
-						{/* Play Button */}
 						<div className='px-6 pb-4 flex items-center gap-6'>
 							<Button
 								onClick={handlePlayAlbum}
@@ -86,13 +82,9 @@ const AlbumPage = () => {
 							</Button>
 						</div>
 
-						{/* Table Section */}
 						<div className='bg-purple-900/20 backdrop-blur-sm'>
-							{/* Table Header */}
-							<div
-								className='grid grid-cols-[16px_4fr_2fr_1fr] gap-4 px-10 py-2 text-sm 
-            text-purple-400 border-b border-purple-600'
-							>
+							<div className='grid grid-cols-[16px_4fr_2fr_1fr] gap-4 px-2 sm:px-10 py-2 text-sm 
+            text-purple-400 border-b border-purple-600'>
 								<div>#</div>
 								<div>Title</div>
 								<div>Released Date</div>
@@ -101,8 +93,7 @@ const AlbumPage = () => {
 								</div>
 							</div>
 
-							{/* Songs List */}
-							<div className='px-6'>
+							<div className='px-2 sm:px-6'>
 								<div className='space-y-2 py-4'>
 									{currentAlbum?.songs.map((song, index) => {
 										const isCurrentSong = currentSong?._id === song._id;
