@@ -10,7 +10,7 @@ export default defineConfig({
 	server: {
 		proxy: {
 			"/api": {
-				target: "https://movie-frontend-9cf4.onrender.com/",
+				target: "https://movie-hs59.onrender.com",
 			},
 		},
 	},
