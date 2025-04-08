@@ -12,8 +12,9 @@ const Topbar = () => {
 
 	return (
 		<div
-			className='flex items-center justify-between p-4 sticky top-0 bg-purple-900/75 
-      backdrop-blur-md z-10
+			className='flex items-center justify-between p-4 sticky top-0 
+			bg-gradient-to-r from-[#D894D5] to-[#6A1B9A] 
+			backdrop-blur-md z-10
     '
 		>
 			<div className='flex gap-2 items-center text-white font-semibold'>

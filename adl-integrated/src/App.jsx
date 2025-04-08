@@ -9,7 +9,7 @@ function App() {
             <h1>Welcome to StreamSphere!</h1>
             <div className="button-container">
                 <a href="http://localhost:5173" className="button">🎞️ Movies</a>
-                <a href="http://localhost:5174" className="button">🎷 Music</a>
+                <a href="http://localhost:3000" className="button">🎷 Music</a>
                 <a href="http://localhost:5175" className="button">📰 News</a>
                 
             </div>

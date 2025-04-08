@@ -51,31 +51,24 @@ export const PlaybackControls = () => {
 
 	return (
 		<footer className='h-20 sm:h-24 bg-[#2D1B4A] border-t border-[#4A306D] px-4'>
-			<div className='flex justify-between items-center h-full max-w-[1800px] mx-auto'>
-				{/* currently playing song */}
-				<div className='hidden sm:flex items-center gap-4 min-w-[180px] w-[30%]'>
+			<div className='flex flex-col sm:flex-row justify-between items-center h-full max-w-[1800px] mx-auto'>
+				{/* Currently playing song */}
+				<div className='flex items-center gap-2 sm:gap-4 min-w-[180px] w-full sm:w-[30%]'>
 					{currentSong && (
-						<>
-							<img
-								src={currentSong.imageUrl}
-								alt={currentSong.title}
-								className='w-14 h-14 object-cover rounded-md'
-							/>
-							<div className='flex-1 min-w-0'>
-								<div className='font-medium truncate hover:underline cursor-pointer text-[#D0A2F7]'>
-									{currentSong.title}
-								</div>
-								<div className='text-sm text-[#B891D9] truncate hover:underline cursor-pointer'>
-									{currentSong.artist}
-								</div>
+						<div className='flex-1 min-w-0'>
+							<div className='font-medium text-sm truncate hover:underline cursor-pointer text-[#D0A2F7]'>
+								{currentSong.title}
 							</div>
-						</>
+							<div className='text-xs sm:text-sm text-[#B891D9] truncate hover:underline cursor-pointer'>
+								{currentSong.artist}
+							</div>
+						</div>
 					)}
 				</div>
 
-				{/* player controls*/}
+				{/* Player controls */}
 				<div className='flex flex-col items-center gap-2 flex-1 max-w-full sm:max-w-[45%]'>
-					<div className='flex items-center gap-4 sm:gap-6'>
+					<div className='flex items-center gap-2 sm:gap-4'>
 						<Button
 							size='icon'
 							variant='ghost'
@@ -120,7 +113,8 @@ export const PlaybackControls = () => {
 						</Button>
 					</div>
 
-					<div className='hidden sm:flex items-center gap-2 w-full'>
+					{/* Slider for current time */}
+					<div className='flex items-center gap-2 w-full'>
 						<div className='text-xs text-[#B891D9]'>{formatTime(currentTime)}</div>
 						<Slider
 							value={[currentTime]}
@@ -132,8 +126,10 @@ export const PlaybackControls = () => {
 						<div className='text-xs text-[#B891D9]'>{formatTime(duration)}</div>
 					</div>
 				</div>
-				{/* volume controls */}
-				<div className='hidden sm:flex items-center gap-4 min-w-[180px] w-[30%] justify-end'>
+
+				{/* Volume controls */}
+				<div className='flex items-center gap-2 sm:gap-4 min-w-[180px] w-full sm:w-[30%] justify-end'>
+					{/* Uncomment if you want to add volume controls
 					<Button size='icon' variant='ghost' className='text-[#B891D9] hover:text-white'>
 						<Mic2 className='h-4 w-4' />
 					</Button>
@@ -143,8 +139,9 @@ export const PlaybackControls = () => {
 					<Button size='icon' variant='ghost' className='text-[#B891D9] hover:text-white'>
 						<Laptop2 className='h-4 w-4' />
 					</Button>
-
-					<div className='flex items-center gap-2'>
+					*/}
+					{/* Uncomment if you want to add volume slider
+					<div className='flex items-center gap-1 sm:gap-2'>
 						<Button size='icon' variant='ghost' className='text-[#B891D9] hover:text-white'>
 							<Volume1 className='h-4 w-4' />
 						</Button>
@@ -153,7 +150,7 @@ export const PlaybackControls = () => {
 							value={[volume]}
 							max={100}
 							step={1}
-							className='w-24 hover:cursor-grab active:cursor-grabbing bg-[#916BBF]'
+							className='w-16 sm:w-24 hover:cursor-grab active:cursor-grabbing bg-[#916BBF]'
 							onValueChange={(value) => {
 								setVolume(value[0]);
 								if (audioRef.current) {
@@ -162,6 +159,7 @@ export const PlaybackControls = () => {
 							}}
 						/>
 					</div>
+					*/}
 				</div>
 			</div>
 		</footer>
