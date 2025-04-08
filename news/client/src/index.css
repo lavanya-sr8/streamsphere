@@ -15,36 +15,35 @@ html, body {
 }
 
 .light-theme {
-    --background: url("https://tailwindcss.com/_next/static/media/hero@75.b2469a49.jpg");
-    --primary: #F8FAFC;
-    --secondary: #0F172A;
-    --txt: #000;
-    --heading: #2dd9fe;
+    background-color: #faf9fc;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23774abe' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");--primary: #f8fafa;
+    --secondary: #0f172a;
+    --txt: #2c2c54; /* Darker text for contrast */
+    --heading: #5e548e; /* Muted purple */
     --btn-color: #fff;
-    --btn-background: #5f99be;
-    --search-background: #000;
-    --c: #2dd9fe;
-    --hover_bg_change: backdrop-filter:6px;
+    --btn-background: #8e44ad; /* Button background */
 }
 
 .dark-theme {
-    --background: url("https://tailwindcss.com/_next/static/media/hero-dark@90.dba36cdf.jpg");
-    --primary: rgb(30,41,59);
-    --secondary: #D5DDF0;
-    --txt: #fff;
-    --heading: #4666FF;
+    background-color: #3a393e;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23a992cd' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");--primary: rgb(30, 41, 59);
+    --secondary: #d5ddf0;
+    --txt: #f8f8f2; /* Light text */
+    --heading: #e1bee7; /* Lighter purple for contrast */
     --btn-color: #000;
     --btn-background: #5f99be;
-    --search-background: #18181b;
 }
 
 body {
-    background: var(--background);
-    background-size: cover;
-    background-position: center;
+    background-color: var(--background-color);
+    background-image: var(--background-image);
+    background-size:  15% auto; /* Adjust size to cover the full page */
+    background-repeat: repeat; /* Allows the pattern to repeat */
+    background-position: center; /* Center the pattern */
     min-height: 100vh;
     margin: 0;
 }
+
 
 .container {
     width: 100% !important;
