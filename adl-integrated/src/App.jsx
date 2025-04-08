@@ -8,9 +8,9 @@ function App() {
             <img src="../public/streamsphere-logo.png" width="350" height="280" alt="StreamSphere Logo"></img>
             <h1>Welcome to StreamSphere!</h1>
             <div className="button-container">
-                <a href="http://localhost:5173" className="button">🎞️ Movies</a>
-                <a href="http://localhost:3000" className="button">🎷 Music</a>
-                <a href="http://localhost:5175" className="button">📰 News</a>
+                <a href="http://localhost:5173" className="button" target="_blank">🎞️ Movies</a>
+                <a href="http://localhost:3000" className="button" target="_blank">🎷 Music</a>
+                <a href="http://localhost:5175" className="button" target="_blank">📰 News</a>
                 
             </div>
         </div>
